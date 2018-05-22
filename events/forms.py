@@ -1,12 +1,9 @@
 from django import forms
-
 from .models import EventDetail, EventParticipant, EventTrainer
-
 
 # call for DatePickerInput
 class DateInput(forms.DateInput):
     input_type = 'date'
-
 
 class EventDetailForm(forms.ModelForm):
 

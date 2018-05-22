@@ -1,8 +1,8 @@
 from django.shortcuts import redirect
 from django.urls import reverse
+#Reverse Modules for next update
 
 from userprofile.models import UserProfileBasic
-
 
 def profile_required():
     def wrapper(func):

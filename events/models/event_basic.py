@@ -12,7 +12,7 @@ from events.models.event_basic_queryset import EventQuerySet
 fs = FileSystemStorage(location='media/event_img/')
 User = settings.AUTH_USER_MODEL
 
-
+#Model Managers Fo Query
 class EventBasicManager(models.Manager):
     """
         comment here purpose of whole manager or activity
