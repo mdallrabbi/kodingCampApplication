@@ -1,6 +1,5 @@
 from django.db import models
 
-
 class EventQuerySet(models.QuerySet):
     """
      details about Event Query set

@@ -5,10 +5,7 @@ from django.shortcuts import render, get_object_or_404
 from django.urls import reverse_lazy
 
 from .forms import EventDetailForm, EventParticipantForm, EventTrainerForm
-
-
 from .models import EventDetail, EventTrainer, EventParticipant
-
 
 class EventDashboardView(LoginRequiredMixin, ListView):
     model = EventDetail
@@ -43,7 +40,6 @@ class EventCreateView(LoginRequiredMixin, CreateView):
         instance.owner = self.request.user
         return super(EventCreateView, self).form_valid(form)
 
-
 class EventTrainerCreateView(LoginRequiredMixin, CreateView):
     form_class = EventTrainerForm
     login_url = '/'
@@ -76,7 +72,6 @@ class EventParticipantCreateView(LoginRequiredMixin, CreateView):
         return super(EventParticipantCreateView, self).form_valid(form)
 """
 
-
 class EventListView(LoginRequiredMixin, ListView):
     login_url = '/'
     model = EventDetail
@@ -88,7 +83,6 @@ class EventListView(LoginRequiredMixin, ListView):
 
     def get_queryset(self):
         return EventDetail.objects.filter(owner=self.request.user)
-
 
 class EventDetailView(LoginRequiredMixin, DetailView):
     login_url = '/'
