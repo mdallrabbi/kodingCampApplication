@@ -21,8 +21,9 @@ def home(request):
 #    else:
 #        return render(request,'auth/login.html')
 
-
 # @user_passes_test(redirect_authenticated_user)
+
+
 def individual_signup(request):
     if request.user.is_authenticated:
         return redirect('home')
